@@ -12,6 +12,7 @@ to encourage and support them. Being an ardent of cricket, I wanted to find inte
 I decided to check number of wins by each team over the years which further urge me to check teamwise winning record against all the other teams. Since winning is not only about 
 the performance of players in a team there is an another underlying and important factor which is toss. I also decided to check if the toss is impacting the outcome of the match.
 
+<br>
 
 **DATA**
 
@@ -42,6 +43,8 @@ all the other teams in IPL. Using TeamwiseInformation.tsv I will be able to visu
 and I can also find if there is a correlation between matches won and tosses won.
 
 Link -  https://www.kaggle.com/manasgarg/ipl/data
+
+<br>
 
 
 **VISUALIZATION**
