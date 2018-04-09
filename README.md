@@ -42,3 +42,10 @@ all the other teams in IPL. Using TeamwiseInformation.tsv I will be able to visu
 and I can also find if there is a correlation between matches won and tosses won.
 
 Link -  https://www.kaggle.com/manasgarg/ipl/data
+
+
+**VISUALIZATION**
+
+For visualization, I used three charts. Two bar chart and one scatterplot. First bar chart shows the number of wins by each and every team from highest to lowest number of wins over
+the years in the history of IPL. Since I used bar chart for this, the exact number will not be known by looking at the chart alone. By hovering every single rectangle bar, we will
+get to know the number of wins by each team. 
