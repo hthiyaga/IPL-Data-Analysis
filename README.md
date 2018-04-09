@@ -3,7 +3,7 @@ Hariharan Thiyagarajan
 CS725 - Spring 2018
 
 
-**Introduction**
+**INTRODUCTION**
 
 The topic I chose for visualization is to show the overview of teams performance and the supporting factor in **Indian Premier League(IPL)** cricket. I selected this topic because, cricket is like religion in India. 
 By starting IPL, cricket fever has reached the pinnacle as IPL has introduced style and entertainment at the grounds, fans hear loud music, 
@@ -13,7 +13,7 @@ I decided to check number of wins by each team over the years which further urge
 the performance of players in a team there is an another underlying and important factor which is toss. I also decided to check if the toss is impacting the outcome of the match.
 
 
-**Data**
+**DATA**
 
 
 I got the data from **kaggle.com** where the **matches.csv** dataset contains the details of all the mathces that was played from 2008 to 2017. There were totally 636 rows of data
