@@ -52,4 +52,5 @@ Link -  https://www.kaggle.com/manasgarg/ipl/data
 For visualization, I used three charts. Two bar chart and one scatterplot. First bar chart shows the number of wins by each and every team from highest to lowest number of wins over
 the years in the history of IPL. Since I used bar chart for this, the exact number will not be known by looking at the chart alone. By hovering every single rectangle bar, we will
 get to know the number of wins by each team. Second bar chart shows the teamwise record. Since there are 12 different teams, I decided to make it interactive by placing a dropdown
-selector where the dropdown will have 12 teams from which we can select any team of our choice to know the stats. 
+selector where the dropdown will have 12 teams from which we can select any team of our choice to know the stats. Barchart will be updated everytime when different team is selected. For
+example: if Chennai Super Kings is selected, bar chart will be display multiple bars which represents the number of wins by chennai aganist every other team in IPL. 
