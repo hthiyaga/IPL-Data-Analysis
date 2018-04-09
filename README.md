@@ -34,6 +34,7 @@ where each had the following details.
 * Venue
 * Umpires
 
-Since I decided to visualize performance of the team and to find the relation between match outcome and toss outcome, I had to do data transformation
+Since I decided to visualize performance of the team and to find the relation between match outcome and toss outcome, I had to do some data transformations. I created a new excel 
+data.tsv based on the matches.csv dataset where I created 4 columns: **Team**, **TW**(Toss won), **MW**(Match won based on toss), **Count**(Total number of wins)**
 
 Link -  https://www.kaggle.com/manasgarg/ipl/data
