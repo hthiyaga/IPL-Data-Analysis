@@ -38,7 +38,7 @@ Since I decided to visualize performance of the team and to find the relation be
 **data.tsv** based on the matches.csv dataset where I created 4 columns: **Team**, **TW**(Tosses won), **MW**(Matches won based on toss), **Count**(Total number of wins irrespective of the toss).
 After filtering the matches.csv, I got all the necessary data in data.tsv. I also created one more excel named **TeamwiseInformation.tsv** where I created fourteen colums. First two
 colums were **roll** and **state**(representing each team), remaining 12 colums had 12 distinct team names. This dataset contains information about number of wins by each team against
-all the other teams in IPL. Using TeamwiseInformation I will be able to visualize the teamwise record for all the team.  Using data.tsv, I will be able to visualize teams performance over the years 
+all the other teams in IPL. Using TeamwiseInformation.tsv I will be able to visualize the teamwise record for all the teams. Using data.tsv, I will be able to visualize teams performance over the years 
 and I can also find if there is a correlation between matches won and tosses won.
 
 Link -  https://www.kaggle.com/manasgarg/ipl/data
