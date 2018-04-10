@@ -67,7 +67,9 @@ from the scatterplot that toss plays a crucial role in teams overall performance
 **DESIGN DECISIONS**
 
 
-
+* Number of wins by each team in IPL history(First chart)
+                  
+                
 
 
 
