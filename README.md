@@ -74,7 +74,7 @@ The idiom I used for this is **bar chart** where x-axis is mapped to different t
     groups. I **sorted** the categorical attribute based on number of wins by each team from **highest to lowest** to show the successfull teams in IPL history.
     
 * **Mark** - Line 
-* **Channel** - Vertical spatial position for quantitaive and horizontal spatial position for categorical
+* **Channel** - Vertical spatial position for quantitaive and horizontal spatial position for categorical.
 * **Color** - Used hex color **#065A53** intially for all the bars and **#B2EDB7** is used when it is hovered. I selected two different colors to show the difference between the move hover and normal chart. 
 
 
@@ -84,8 +84,14 @@ As a result, I was able to make a neat bar chart that cleary shows the overall w
 
 **Teamwise record** - Second chart
 
+The idiom I used for this is **bar chart** where x-axis is mapped to different teams which is **categorical** attribute sorted based on **alphabetical order** and y-axis is mapped to count which is **quantitative**
+    attribute represents the number of wins by each team. Added to that, I also used dropdown selector where the dropdown contains list of all teams sorted based on the  number of wins.
+    
+* **Mark** - Line 
+* **Channel** - Vertical spatial position for quantitaive and horizontal spatial position for categorical.
+* **Color** - Used hex color **#065A53** intially for all the bars and **#B2EDB7** is used when it is hovered. I selected two different colors to show the difference between the move hover and normal chart. 
 
-
+Every time the team is selected from the dropdown, it will update the bar chart with the corresponding values and provides us the correct information. 
 
 
 
