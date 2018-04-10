@@ -49,13 +49,47 @@ Link -  https://www.kaggle.com/manasgarg/ipl/data
 
 **VISUALIZATION**
 
-For visualization, I used three charts. Two bar chart and one scatterplot. First bar chart shows the number of wins by each and every team from highest to lowest number of wins over
+For visualization, I used three charts. Two bar chart and one scatterplot. First bar chart shows the number of wins by each and every team over
 the years in the history of IPL. Since I used bar chart for this, the exact number will not be known by looking at the chart alone. By **hovering** every single rectangle bar, we will
 get to know the number of wins by each team. Second bar chart shows the teamwise record. Since there are 12 different teams, I decided to make it **interactive** by placing a **dropdown**
 **selector** where the dropdown will have 12 teams from which we can select any team of our choice to know the stats. Barchart will be updated everytime when different team is selected. For
 example: if Chennai Super Kings is **selected**, bar chart will be display multiple bars which represents the number of wins by Chennai Super Kings(CSK) aganist every other team in IPL. 
-Hovering the each bar will give exact number of wins against that particular team. Even the teams in the dropdown selector are palced from highest to lowest number of wins.The third and final scatterplot shows the supporting factor for the previous two charts. If we look at the first and second 
+Hovering the each bar will give exact number of wins against that particular team. The third and final scatterplot shows the supporting factor for the previous two charts. If we look at the first and second 
 bar chart, Mumbai Indians(MI) looks like a most dominating team over the years. I plotted matches and tosses won in the scatterplot. Each **dot** in the scatterplot has **different colors**
 and hovering them will provide team name, number of tosses and mathces won by them. I also placed a **color legend** to know the teams name. Once after this, I found that there is a strong 
 positive correlation between the toss and match outcome. When the number of tosses won by each team increases, number of mathces won by them also increases. It is clearly evident
 from the scatterplot that toss plays a crucial role in teams overall performance as well as the outcome of the match.
+
+
+<br>
+
+
+**DESIGN DECISIONS**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
