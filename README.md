@@ -53,4 +53,8 @@ For visualization, I used three charts. Two bar chart and one scatterplot. First
 the years in the history of IPL. Since I used bar chart for this, the exact number will not be known by looking at the chart alone. By hovering every single rectangle bar, we will
 get to know the number of wins by each team. Second bar chart shows the teamwise record. Since there are 12 different teams, I decided to make it interactive by placing a dropdown
 selector where the dropdown will have 12 teams from which we can select any team of our choice to know the stats. Barchart will be updated everytime when different team is selected. For
-example: if Chennai Super Kings is selected, bar chart will be display multiple bars which represents the number of wins by chennai aganist every other team in IPL. 
+example: if Chennai Super Kings is selected, bar chart will be display multiple bars which represents the number of wins by Chennai Super Kings(CSK) aganist every other team in IPL. 
+Hovering the each bar will give exact number of wins. The third and final scatterplot shows the supporting factor for the previous two charts. If we look at the first and second 
+bar chart, Mumbai Indians(MI) looks like a most dominating team over the years. I plotted matches and tosses won in the scatterplot and to my surprise there is a strong 
+positive correlation between the toss and match outcome. When the number of tosses won by each team increases, number of mathces won by them also increases. It is clearly evident
+from the scatterplot that toss plays a crucial role in teams overall performance as well as the outcome of the match.
