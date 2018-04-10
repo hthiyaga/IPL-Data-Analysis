@@ -75,7 +75,12 @@ The idiom I used for this is **bar chart** where x-axis is mapped to different t
     
 * **Mark** - Line 
 * **Channel** - Vertical spatial position for quantitaive and horizontal spatial position for categorical
-* **Color** - Hex color **#065A53** is used intially for all the bars and **#B2EDB7** is used when it is hovered. I selected two different colors to show the difference between the move hover and normal chart. 
+* **Color** - Used hex color **#065A53** intially for all the bars and **#B2EDB7** is used when it is hovered. I selected two different colors to show the difference between the move hover and normal chart. 
+
+
+As a result, I was able to make a neat bar chart that cleary shows the overall winning performance of all the IPL teams from highest to lowest. 
+
+
 
 
 
