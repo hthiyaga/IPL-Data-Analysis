@@ -67,7 +67,21 @@ from the scatterplot that toss plays a crucial role in teams overall performance
 **DESIGN DECISIONS**
 
 
-* Number of wins by each team in IPL history(First chart)
+**Number of wins by each team in IPL history** - First chart 
+
+The idiom I used for this is **bar chart** where x-axis is mapped to different teams which is **categorical** attribute and y-axis is mapped to count which is **quantitative**
+    attribute represents the number of wins by each team. I chose bar chart among all the choices of idiom because bar chart is the best way to compare things between different
+    groups. I **sorted** the categorical attribute based on number of wins by each team from **highest to lowest** to show the successfull teams in IPL history.
+    
+**Mark** - Line 
+**Channel** - Vertical spatial position for quantitaive and horizontal spatial position for categorical
+**color** - Hex color **#065A53** intially for the bar and **#B2EDB7** is used when it is hovered. I used this to show the difference between the move hover and normal chart. 
+
+
+
+
+
+
                   
                 
 
