@@ -3,7 +3,7 @@ Hariharan Thiyagarajan
 CS725 - Spring 2018
 
 
-**INTRODUCTION**
+<H2>INTRODUCTION</H2>
 
 The topic I chose for visualization is to show the overview of teams performance and the supporting factor in **Indian Premier League(IPL)** cricket. I selected this topic because, cricket is like religion in India. 
 By starting IPL, cricket fever has reached the pinnacle as IPL has introduced style and entertainment at the grounds, fans hear loud music, 
@@ -14,7 +14,7 @@ the performance of players in a team there is an another underlying and importan
 
 <br>
 
-**DATA**
+<H2>DATA</H2>
 
 
 I got the data from **kaggle.com** where the **matches.csv** dataset contains the details of all the mathces that was played from 2008 to 2017. There were totally 636 rows of data
@@ -47,7 +47,7 @@ Link -  https://www.kaggle.com/manasgarg/ipl/data
 <br>
 
 
-**VISUALIZATION**
+<H2>VISUALIZATION</H2>
 
 For visualization, I used three charts. Two bar chart and one scatterplot. First bar chart shows the number of wins by each and every team over
 the years in the history of IPL. Since I used bar chart for this, the exact number will not be known by looking at the chart alone. By **hovering** every single rectangle bar, we will
@@ -64,7 +64,7 @@ from the scatterplot that toss plays a crucial role in teams overall performance
 <br>
 
 
-**DESIGN DECISIONS**
+<H2>DESIGN DECISIONS</H2>
 
 
 **Number of wins by each team in IPL history** - First chart 
@@ -79,6 +79,12 @@ The idiom I used for this is **bar chart** where x-axis is mapped to different t
 
 
 As a result, I was able to make a neat bar chart that cleary shows the overall winning performance of all the IPL teams from highest to lowest. 
+
+
+
+**Teamwise record** - Second chart
+
+
 
 
 
