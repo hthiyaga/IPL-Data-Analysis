@@ -56,6 +56,6 @@ get to know the number of wins by each team. Second bar chart shows the teamwise
 example: if Chennai Super Kings is selected, bar chart will be display multiple bars which represents the number of wins by Chennai Super Kings(CSK) aganist every other team in IPL. 
 Hovering the each bar will give exact number of wins. The third and final scatterplot shows the supporting factor for the previous two charts. If we look at the first and second 
 bar chart, Mumbai Indians(MI) looks like a most dominating team over the years. I plotted matches and tosses won in the scatterplot. Each **dot** in the scatterplot has **different colors**
-and hovering them will provide team name, number of tosses and mathces won by them. I also placed a **color legend** to know the teams name. Once of this, I found that there is a strong 
+and hovering them will provide team name, number of tosses and mathces won by them. I also placed a **color legend** to know the teams name. Once after this, I found that there is a strong 
 positive correlation between the toss and match outcome. When the number of tosses won by each team increases, number of mathces won by them also increases. It is clearly evident
 from the scatterplot that toss plays a crucial role in teams overall performance as well as the outcome of the match.
