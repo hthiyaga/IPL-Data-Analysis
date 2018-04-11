@@ -121,9 +121,9 @@ Using scatterplot is the only best way to show the correlation between two diffe
 
 <h2>DEVELOPMENT PROCESS</h2>
 
-I started working on this assignment right from the end of march everyday for at least one-two hours. After HW-7 feedback, I had to work on my dataset to select
-the appropriate questions from it for visualization. After this, making the chart interactive was challenging among all. After surfing the internet,
-I got ideas of making my chart interactive and that reflects in my final assignment. Once after I completed the interactive chart, it took almost two days to merge the all three
+I started working on this assignment right from the end of march everyday for at least one-two hours. After receiving feedback on HW-7, I had to work on my dataset to select
+the appropriate question from it for visualization. After this, making the chart interactive was challenging part among all. After surfing the internet,
+I got an idea of making my chart interactive and that reflects in my final assignment. Once after I completed the interactive chart, it took almost two days to merge the all three
 charts I had. Because, one of the major drwaback in merging was usage of different d3 versions. My final scatterplot was done using d3 version 4 which didn't work while merging it
 with other charts as the other two charts was made by version 3. Finally, I changed the scatterplot from version 4 to version 3 and it did work after merging it with other two
 charts.
