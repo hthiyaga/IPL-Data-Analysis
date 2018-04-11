@@ -134,9 +134,9 @@ charts.
 <h2>REFERENCES<h2>
 
 
-http://bl.ocks.org/jonahwilliams/2f16643b999ada7b1909
-http://bl.ocks.org/cflavs/695d3215ccbce135d3bd
-https://www.youtube.com/watch?v=LO-8xiB3Z_Q
+http://bl.ocks.org/jonahwilliams/2f16643b999ada7b1909<br>
+http://bl.ocks.org/cflavs/695d3215ccbce135d3bd<br>
+https://www.youtube.com/watch?v=LO-8xiB3Z_Q<br>
 http://bl.ocks.org/weiglemc/6185069
 
 
