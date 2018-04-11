@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+<style>
+ 
+  body {
+  font: 10px sans-serif;
+}  
+  .a{
+    
+    text-align:center;
+    color:teal;
+  }
+/*chart-1 css*/ 
+  
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: #065A53;
+}
+
+.bar:hover {
+  fill: #B2EDB7 ;
+}
+
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+/*---------------------------------------------------------*/
+
+/*chart-2 css*/
+.rectangle {
+	fill: #065A53;
+}
+.rectangle:hover {
+	fill: #B2EDB7;
+}
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+  
+/*chart-3*/  
+  .axis { font: 14px calibri; }
+  .label {font: 16px calibri; }
+
+.tooltip {
+  position: absolute;
+  width: 150px;
+  height: 60px;
+  background: #f2f2f2;
+  pointer-events: none;
+  font-size:13px;
+  font-weight:bold;
+}
+  
+
+  
+  /* basic positioning */
+.legend { list-style: none;
+           margin-left:768px;
+           margin-top:-480px;
+  
+  }
+.legend li { float: left; 
+  margin-right: 10px; }
+.legend span { border: 1px solid #ccc; float: left; width: 12px; height: 12px; margin: 2px; }
+/* your colors */
+.legend .CSK{ background-color: #ff8c00; }
+.legend .DC { background-color: Gray; }
+.legend .DD{ background-color: Red; }
+.legend .GL { background-color: saddlebrown; }
+.legend .KT{ background-color: Darkgreen; }
+.legend .KXIP { background-color: Black; }
+.legend .KKR{ background-color: tan; }
+.legend .MI{ background-color: teal; }
+.legend .RR{ background-color: Blue; }
+.legend .RPS { background-color: Purple; }
+.legend .RCB{ background-color: Maroon; }
+.legend .SRH{ background-color: #ff1ed2; }
+
+  
+</style>
+</head>
+<body>
+  <H1 class="a">Overview of  Indian Premier League<H1><br><br>
+  <h1>Number of wins by each team in IPL history<h1>
+  <div><svg id="chart1" width="1379" height="502"></svg> </div>
+	<h1>Teamwise record</h1><br>
+  <div id="drop" align=center></div>
+  <div><svg id="chart2" width="1379" height="550"></svg></div>
+  <h1>Toss won vs Match won</h1>
+  <div><svg id="chart3" width="1300" height="450"></svg></div>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  
+<script>
+  
+//chart1
+
+    
+ 
+  var margin = {top: 40, right: 20, bottom: 30, left: 40},
+    width = 1042 - margin.left - margin.right,
+    height = 410 - margin.top - margin.bottom;
+  
+  var formatPercent = d3.format(".0");
+  
+  var y1 = d3.scale.linear()
+    .range([height, 0]);
+
+var x1 = d3.scale.ordinal()
+    .rangeRoundBands([0, width], 0.432);
+  
+  var xAxis1 = d3.svg.axis()
+    .scale(x1)
+    .orient("bottom");
+  
+  var yAxis1 = d3.svg.axis()
+    .scale(y1)
+    .orient("left")
+    .tickFormat(formatPercent);
+  
+  var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<strong>No.of wins:</strong> <span style='color:Red'>" + d.Count + "</span>";
+  })
+var svg1 = d3.select("#chart1").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  
+  svg1.call(tip);
+  d3.tsv("data.tsv", type, function(error, data) {
+  x1.domain(data.map(function(d) { return d.Team; }));
+  y1.domain([0, d3.max(data, function(d) { return d.Count; })]);
+    
+     svg1.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis1);
+
+  svg1.append("g")
+      .attr("class", "y1 axis")
+      .call(yAxis1)
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", "0.852em")
+      .style("text-anchor", "end")
+      .text("Count");
+    
+     svg1.selectAll(".bar")
+      .data(data)
+    .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", function(d) { return x1(d.Team); })
+      .attr("width", x1.rangeBand())
+      .attr("y", function(d) { return y1(d.Count); })
+      .attr("height", function(d) { return height - y1(d.Count); })
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide)
+      
+});
+  
+  function type(d) {
+  d.Count = +d.Count;
+  return d;
+}
+  
+
+ 
+  
+//chart2
+ function barWithDropDown(){
+   
+ 
+var margin = {top: 80, right: 180, bottom: 80, left: 180},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var svg2 = d3.select("#chart2").append("svg")
+	.attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+	.append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.tsv("TeamwiseInformation.tsv", function(error, data){
+
+	
+	
+	// Get every column value
+	var elements = Object.keys(data[0])
+		.filter(function(d){
+			return ((d != "Roll") & (d != "State"));
+		});
+	var selection = elements[0];
+
+	var y2 = d3.scale.linear()
+			.domain([0, d3.max(data, function(d){
+				return +d[selection];
+			})])
+			.range([height, 0]);
+
+	var x2 = d3.scale.ordinal()
+			.domain(data.map(function(d){ return d.State;}))
+			.rangeBands([0, width]);
+
+
+	var xAxis = d3.svg.axis()
+		.scale(x2)
+	    .orient("bottom");
+
+	var yAxis = d3.svg.axis()
+		.scale(y2)
+	    .orient("left");
+  
+  
+
+	svg2.append("g")
+    	.attr("class", "x axis")
+    	.attr("transform", "translate(0," + height + ")")
+    	.call(xAxis);
+
+  
+  
+
+
+ 	svg2.append("g")
+    	.attr("class", "y axis")
+    	.call(yAxis);
+
+	svg2.selectAll("rectangle")
+		.data(data)
+		.enter()
+		.append("rect")
+		.attr("class","rectangle")
+		.attr("width", width/data.length-9)
+		.attr("height", function(d){
+			return height - y2(+d[selection]);
+		})
+		.attr("x", function(d, i){
+			return (width / data.length) * i ;
+		})
+		.attr("y", function(d){
+			return y2(+d[selection]);
+		})
+		.append("title")
+		.text(function(d){
+			return "Number of wins against "+d.State + " : " + d[selection]
+    ;
+		});
+    
+
+	var selector = d3.select("#drop")
+    	.append("select")
+    	.attr("id","dropdown")
+    	.on("change", function(d){
+        	selection = document.getElementById("dropdown");
+
+        	y2.domain([0, d3.max(data, function(d){
+				return +d[selection.value];})]);
+
+        	yAxis.scale(y2);
+
+        	d3.selectAll(".rectangle")
+           		.transition()
+	            .attr("height", function(d){
+					return height - y2(+d[selection.value]);
+				})
+				.attr("x", function(d, i){
+					return (width / data.length) * i ;
+				})
+				.attr("y", function(d){
+					return y2(+d[selection.value]);
+				})
+          
+           .ease("linear")
+           		.select("title")
+           		.text(function(d){
+           			return  d.State + " : " + d[selection.value];
+           		});
+          	
+     
+      
+           	d3.selectAll("g.y.axis")
+           		.transition()
+           		.call(yAxis);
+
+         });
+
+    selector.selectAll("option")
+      .data(elements)
+      .enter().append("option")
+      .attr("value", function(d){
+        return d;
+      })
+      .text(function(d){
+        return d;
+      })
+
+
+});
+
+ }
+barWithDropDown();
+  
+  //chart 3
+  var svg = d3.select("#chart3"), 
+    margin = {top: 20, right: 20, bottom: 50, left: 70},
+    width = 800 - margin.left - margin.right,
+    height = 410 - margin.top - margin.bottom;
+
+var g1 = svg.append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// add the tooltip area to the webpage
+var tooltip = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
+// load data
+d3.tsv("data.tsv", function (d) {
+  // change string (from CSV) into number format
+  d["TW"] = +d["TW"];
+  d["MW"] = +d["MW"];
+  return d;
+}, function(error, data) {
+
+	if (error) throw error;
+  
+/* 
+ * value accessor - returns the value to encode for a given data object.
+ * scale - maps value to a visual display encoding, such as a pixel position.
+ * map function - maps from data value to display value
+ */ 
+  
+// setup x 
+var xValue = function(d) { return d["TW"];}, // data -> value
+    xScale = d3.scale.linear().range([0, width]),     // value -> display
+    xMap = function(d) { return xScale(xValue(d));},
+    xAxis2=d3.svg.axis().scale(xScale).orient("bottom"); // data -> display
+  
+
+// setup y
+var yValue = function(d) { return d["MW"];}, // data -> value
+    yScale = d3.scale.linear().range([height, 0]),    // value -> display
+    yMap = function(d) { return yScale(yValue(d));},
+    yAxis2=d3.svg.axis().scale(yScale).orient("left"); // data -> display
+
+  // don't want dots overlapping axis, so add in buffer to data domain
+  xScale.domain([d3.min(data, xValue)-1, d3.max(data, xValue)+1]);
+  yScale.domain([0, d3.max(data, yValue)+1]);
+
+  // x-axis
+  g1.append("g")
+ 		.attr("class", "axis x-axis")
+  	.attr("transform", "translate(0," + height + ")") // move axis to bottom of chart
+   	.call(xAxis2);
+  
+  // x-axis label
+  g1.append("text")
+  	.attr("class", "label")
+   	.attr("x", width/2)
+    .attr("y", height+(margin.bottom*0.75))
+    .style("text-anchor", "middle")
+    .style("font-weight", "bold")
+      .style("font-size", "22px")
+
+    .text("Tosses won")
+    .style("fill","Teal");
+
+  // y-axis
+  g1.append("g")
+ 		.attr("class", "axis y-axis")
+ 		.call(yAxis2);
+  
+  // y-axis label
+  g1.append("text") 
+    .attr("class", "label")
+    .attr("x", 0-(height/2))
+    .attr("y", 0-(margin.left*0.55))
+    .attr("transform", "rotate(-90)") // rotate text -90 degrees from x, y
+    .style("text-anchor", "middle")
+    .style("font-weight", "bold")
+    .style("font-size", "22px")
+    .text("Matches won")
+    .style("fill","Teal");
+
+  // draw dots
+  
+  
+  g1.selectAll(".dot")
+      .data(data)
+    .enter().append("circle")
+      .attr("class", "dot")
+      .attr("r", 4.5)
+      .attr("cx", xMap)
+      .attr("cy", yMap)
+      
+    .style("fill",function(d){
+    
+            if(d.Team =="KT"){ return "Darkgreen";}
+            else if( d.Team =="RPS") { return "Purple";}
+            else if( d.Team =="DC") { return "Gray";}
+            else if( d.Team =="MI") { return "teal";}
+            else if( d.Team =="DD") { return"Red";}
+            else if( d.Team =="RR") { return "Blue";}
+            else if( d.Team =="RCB") { return "Maroon";}
+            else if( d.Team =="CSK") { return "#ff8c00";}
+            else if( d.Team =="KKR") { return "Tan";}
+    
+            else if( d.Team =="KXIP") { return "#0000";}
+            
+            else if( d.Team =="GL") { return "saddlebrown";}
+            else if(d.Team =="SRH") {return"#ff1ed2";}
+    else
+      {return "#ff8c00";}
+           
+  })
+            
+     
+      // tooltip
+      .on("mouseover", function(d) {
+          tooltip.transition()
+               .duration(200)         // ms delay before appearing
+               .style("opacity", .8); // tooltip appears on mouseover
+          tooltip.html(d["Team"] + "<br/> " + "<br/>" +"No of tosses won:"+ xValue(d) 
+	        + "<br/>"+ "<br/>"+"No of matches won " + yValue(d) + "")
+               .style("left", (d3.event.pageX + 10) + "px")  // specify x location
+               .style("top", (d3.event.pageY - 28) + "px");  // specify y location
+      })
+      .on("mouseout", function(d) {
+          tooltip.transition()
+               .duration(500)
+               .style("opacity", 0); // disappear on mouseout
+      });
+});
+
+ 
+</script>
+  <ul class="legend">
+    <li><span class="CSK"></span>CSK</li><br>
+  <br><br>
+    <li><span class="DC"></span>DC</li></br></br></br>
+    <li><span class="DD"></span>DD
+</li><br><br><br>
+    <li><span class="GL"></span>GL</li></br></br></br>
+<li><span class="KT"></span> KT
+</li></br></br></br>
+    <li><span class="KXIP"></span> KXIP</li></br></br></br>
+<li><span class="KKR"></span> KKR
+</li></br></br></br>
+    <li><span class="MI"></span> MI
+</li></br></br></br>
+<li><span class="RR"></span> RR
+
+</li></br></br></br>
+    <li><span class="RPS"></span>RPS
+
+</li></br></br></br>
+<li><span class="RCB"></span>RCB
+
+
+</li></br></br></br>
+    <li><span class="SRH"></span>SRH
+
+
+</li></br>
+
+
+
+
+</ul>
+
+
+  
+</body>
