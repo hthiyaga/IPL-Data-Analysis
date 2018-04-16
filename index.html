@@ -5,11 +5,34 @@
  
   body {
   font: 10px sans-serif;
+  //background-color:#edebb8;
 }  
-  .a{
+  .b{
     
-    text-align:center;
+    margin-left:30%;
     color:teal;
+	font-size:30px;
+  }
+  
+  .text{
+  
+  font-size:20px;
+  	font-family:cursive;
+  
+  }
+  
+  .intro{
+  
+   font-size:20px;
+   	font-family:cursive;
+  
+  }
+  
+  .final{
+  
+    font-size:20px;
+	margin-top:10%;
+	font-family:cursive;
   }
 /*chart-1 css*/ 
   
@@ -95,15 +118,15 @@
   
   /* basic positioning */
 .legend { list-style: none;
-           margin-left:768px;
-           margin-top:-480px;
+           margin-left:76%;
+           margin-top:-48%;
   
   }
-.legend li { float: left; 
-  margin-right: 10px; }
+.legend li { 
+   }
 .legend span { border: 1px solid #ccc; float: left; width: 12px; height: 12px; margin: 2px; }
 /* your colors */
-.legend .CSK{ background-color: #ff8c00; }
+.legend .CSK{ background-color: #ff8c00;  }
 .legend .DC { background-color: Gray; }
 .legend .DD{ background-color: Red; }
 .legend .GL { background-color: saddlebrown; }
@@ -120,14 +143,119 @@
 </style>
 </head>
 <body>
-  <H1 class="a">Overview of  Indian Premier League<H1><br><br>
-  <h1>Number of wins by each team in IPL history<h1>
-  <div><svg id="chart1" width="1379" height="502"></svg> </div>
-	<h1>Teamwise record</h1><br>
-  <div id="drop" align=center></div>
-  <div><svg id="chart2" width="1379" height="550"></svg></div>
-  <h1>Toss won vs Match won</h1>
-  <div><svg id="chart3" width="1300" height="450"></svg></div>
+<div class = 'row1' style='width:100%'>
+<img src="ipl.png" style="float:left" > 
+<h1 class="b">Overview of  Indian Premier League</h1><br><br>
+
+</div>
+
+<div class = 'row' style='width:100%;' >
+	<div style= 'float:left;width:76%;margin-top:10%;margin-left:-15%'>
+	    <p class="intro">All the visualization shows the performance of each team and also the<br>
+		supporting factor that contributes to the win in the game of <a href = "https://en.wikipedia.org/wiki/Cricket">cricket</a>.</p><br>
+		<h1>Number of wins by each team from 2008-2017</h1>
+		<div><svg id="chart1" width="1379" height="502"></svg> </div>
+		<P class="text"> The above bar chart shows the number of wins by individual team in IPL history. Hovering the each
+		bar will show us<br> the exact number of wins from 2008 to 2017. This visualization shows the dominant team 
+        in IPL. Added to that, hovering<br> the each bar will give us the exact number of wins.		</p><br><br>
+			<H1>Teamwise record</H1><br>
+
+
+		 <div id="drop" align=center></div>
+		 <div><svg id="chart2" width="1379" height="550"></svg></div>
+		 
+		 <p class ="text"> The above bar chart shows the teamwise record among all the teams in IPL. Selecting the different
+		 name from the dropdown<br> will provide the number of wins by that particular team against each and every team. Hovering the each
+		 bar will provide the<br>exact number of wins</p> <br><br><br>
+		 <h1>Toss won vs Match won</h1>
+		<div style= 'float:left;width:73%'><svg id="chart3" width="1300" height="450"></svg>
+		
+		        <ul class="legend">
+    <li><span class="CSK"></span>CSK</li><br><br>
+ 
+    <li><span class="DC"></span>DC</li></br><br>
+    <li><span class="DD"></span>DD
+</li><br><br>
+    <li><span class="GL"></span>GL</li></br><br>
+<li><span class="KT"></span> KT
+</li></br><br>
+    <li><span class="KXIP"></span> KXIP</li></br><br>
+<li><span class="KKR"></span> KKR
+</li></br><br>
+    <li><span class="MI"></span> MI
+</li></br><br>
+<li><span class="RR"></span> RR
+
+</li></br><br>
+    <li><span class="RPS"></span>RPS
+
+</li></br><br>
+<li><span class="RCB"></span>RCB
+
+
+</li></br><br>
+    <li><span class="SRH"></span>SRH
+
+
+</li></br>
+
+
+
+
+</ul><br>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+		<pre class ="final">Toss plays a crucial role in IPL or any format of cricket when weather and field conditions comes into the picture. Since all the 
+matches in IPL starts in the evening, dew forms on the grass field when the surface temperature drops. Because of the wet outfield, 
+it will be difficult for the bowlers to hold the grip of the ball and bowl in the desired direction to the batsman. Due to this, 
+it will be easy for the batsman to score runs unless and until they play poor shots. The above <b>Scatterplot</b> shows the correlation 
+between the tosses won and matches won. Hovering the each coloured dot will provide the number of matches won based on the 
+tosses won along with the team name. It is clearly evident that there is a positive correlation between the matches and tosses won. </pre>		 
+		 
+		 
+
+		
+		
+		
+		
+		
+	</div>
+	<div style='float:left;margin-top:0%' >
+
+	<h1>Chennai Super Kings</h1>
+	<img src="csk.png" height = "100" style="margin-top:-45%; margin-left:100%;" > <br><br><br><br><br><br><br><br><br><br><br>
+	<h1>Deccan chargers</h1>
+	<img src="DC.png" height = "120" style="margin-top:-35%; margin-left:105%;" > <br><br><br><br><br><br><br><br><br><br>
+    <h1>Delhi Daredevils</h1>
+	<img src="DD.png" height = "120" style="margin-top:-35%; margin-left:110%;"> <br><br><br><br><br><br><br><br><br><br>
+	<h1>Gujarat Lions</h1>
+	<img src="GL.jpg" height = "120"  style="margin-top:-35%; margin-left:100%;"> <br><br><br><br><br><br><br><br><br><br>
+	<h1>Kolkata Knight Riders</h1>
+	<img src="KKR.png" height = "120" style="margin-top:-30%; margin-left:110%;"> <br><br><br><br><br><br><br><br><br><br>
+	<h1>Kochi Tuskers Kerala</h1>
+	<img src="KT.jpg" height = "120" style="margin-top:-30%; margin-left:110%;"> <br><br><br><br><br><br><br><br><br><br><br>
+	<h1>Kings XI Punjab</h1>  
+	<img src="KXIP.jpg" height = "140" style="margin-top:-35%; margin-left:110%;"> <br><br><br><br><br><br><br><br><br><br>
+	<h1>Mumbai Indians</h1>
+	<img src="MI.jpg" height = "150" style="margin-top:-35%; margin-left:100%;"> <br><br><br><br><br><br><br><br><br><br>
+	<h1>Royal Challengers Bangalore</h1>  
+	<img src="RCB.png" height = "120" style="margin-top:-35%; margin-left:110%;"> <br><br><br><br><br><br><br><br><br><br><br>
+	<h1>Risping Pune Supergiants</h1>
+	<img src="RPS.jpg" height = "100" style="margin-top:-35%; margin-left:100%;"> <br><br><br><br><br><br><br><br><br><br><br>
+	<h1>Rajasthan Royals</h1> 
+	<img src="RR.jpg" height = "120" style="margin-top:-35%; margin-left:110%;"> <br><br><br><br><br><br><br><br><br><br>
+    <h1>Sunrisers Hyderabad</h1>
+	<img src="SRH.jpg" height = "120"  style="margin-top:-35%; margin-left:100%;"> 
+	
+  
+	</div>
+	
+	
+
+</div>
+
+
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
   <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
@@ -480,39 +608,7 @@ var yValue = function(d) { return d["MW"];}, // data -> value
 
  
 </script>
-  <ul class="legend">
-    <li><span class="CSK"></span>CSK</li><br>
-  <br><br>
-    <li><span class="DC"></span>DC</li></br></br></br>
-    <li><span class="DD"></span>DD
-</li><br><br><br>
-    <li><span class="GL"></span>GL</li></br></br></br>
-<li><span class="KT"></span> KT
-</li></br></br></br>
-    <li><span class="KXIP"></span> KXIP</li></br></br></br>
-<li><span class="KKR"></span> KKR
-</li></br></br></br>
-    <li><span class="MI"></span> MI
-</li></br></br></br>
-<li><span class="RR"></span> RR
 
-</li></br></br></br>
-    <li><span class="RPS"></span>RPS
-
-</li></br></br></br>
-<li><span class="RCB"></span>RCB
-
-
-</li></br></br></br>
-    <li><span class="SRH"></span>SRH
-
-
-</li></br>
-
-
-
-
-</ul>
 
 
   
